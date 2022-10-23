@@ -71,7 +71,6 @@ public class Document {
         for (int i = 0; i < masSL.length; i++) {
             masSL[i] = masSL[i].strip();
         }
-        System.out.println(masSL.length);
         for (int i = 1; i < masSL.length; i++) {
             for (int j = 1; j < masSL.length - 1; j++) {
                 if (masSL[j - 1].length() > masSL[i].length()) {
@@ -86,13 +85,12 @@ public class Document {
     }
 
     public static void dubleLetters(String st) {
-        StringBuilder str = new StringBuilder(st);
-        str.append(str);
-        System.out.println(str);
-        for (int i = 0; i<str.length()-1; i++){
-//            str.append(a);
+        String[] st1 = st.split("");
+        StringBuilder st2 = new StringBuilder();
+        for (int i = 0; i<st.length(); i++){
+            st2.append(st1[i]).append(st1[i]);
         }
-        System.out.println(str);
+        System.out.println(st2);
     }
 
     public void stStar() {
